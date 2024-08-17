@@ -6,7 +6,7 @@
  navigator.geolocation.getCurrentPosition(function(position) {
  var lat = position.coords.latitude;
  var lon = position.coords.longitude;
- var api = "https://nominatim.openstreetmap.org/reverse?format=json&lat=" + lat + "&lon=" + lon;
+ var api = "https://nominatim.openstreetmap.org/reverse?format=json&lat=" + lat + "&lon=" + lon + "&addressdetails=1&zoom=18&polygon_svg=1";
  fetch(api)
  .then(function(response) {
  return response.json();
